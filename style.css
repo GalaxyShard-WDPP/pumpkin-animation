@@ -17,14 +17,18 @@ html,body {
 .pumpkin {
     height:11em;
     width:15em;
-    background:#f68632;
+    background: #ffc040;
     border:0.4em solid #a14907;
     border-radius:70%/110%;
     position:relative;
-    box-shadow:inset 0 0 20px #a14907, 0 0 30px -4px red;
+    box-shadow:inset 0 0 20px #a14907, 0 0 30px -4px #ff4040;
     z-index:1;
-    animation:float 3s infinite;
-    
+    animation:float 3s infinite alternate;
+    transition:background-color 1s ease;
+}
+.pumpkin:hover {
+    background:#ffddc0;
+    /*background:#f68632;*/
 }
 .pumpkin .texture {
     height:10.8em;
@@ -74,11 +78,32 @@ html,body {
     border-bottom:2.1em solid transparent;
     border-left:2.4em solid #401b03;
 }
+.pumpkin .eye.right .pupil {
+    background:#ffffff;
+    box-shadow:0 0 10px 2px #ffc0c0;
+    position:absolute;
+    bottom:-1.5em;
+    left:-2.3em;
+    width:10px;
+    height:10px;
+    border-radius:100%;
+}
 .pumpkin .eye.left {
     left:3.7em;
     transform:rotate(-30deg);
     border-bottom:2.1em solid transparent;
     border-right:2.4em solid #401b03;
+    /*background:#808080;*/
+}
+.pumpkin .eye.left .pupil {
+    background:#ffffff;
+    box-shadow:0 0 10px 2px #ffc0c0;
+    position:absolute;
+    bottom:-1.5em;
+    right:-2.3em;
+    width:10px;
+    height:10px;
+    border-radius:100%;
 }
 .pumpkin .mouth {
     border-bottom:1em solid #401b03;
